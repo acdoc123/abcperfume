@@ -69,7 +69,7 @@ const SocialForm = (props) => {
         </div>
       )}
       {
-        <GoogleOAuthProvider clientId="868031560341-5189eqtqslro26c0v60jph6d7f4kkgo0.apps.googleusercontent.com">
+        <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}>
           <div
             style={{
               display: "flex",

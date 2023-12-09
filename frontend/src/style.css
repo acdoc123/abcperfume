@@ -16,9 +16,13 @@
   --danger-color: #dc3545;
   --bs-primary-rgb: 62, 151, 169;
   --bs-primary: #3e97a9;
-  --bs-blue: #3e97a9;
 }
 .btn-primary {
+  color: #fff;
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+.btn-primary:focus {
   color: #fff;
   background-color: var(--primary-color);
   border-color: var(--primary-color);
@@ -341,6 +345,20 @@ header {
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
 }
+a {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+a:hover {
+  color: #4dbbd1;
+  text-decoration: underline;
+}
+.list-group-item.active {
+  z-index: 2;
+  color: #fff;
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
 
 .cus-input-group-label {
   position: absolute;
@@ -655,7 +673,7 @@ header {
 
 .cus-sidebar-item:hover {
   color: var(--white-color) !important;
-  background-color: var(--primary-color);
+  background-color: #4dbbd1;
 }
 
 .cus-sidebar-item.cus-sidebar-item--pink:hover {
@@ -669,10 +687,30 @@ header {
 .cus-sidebar-item.cus-sidebar-item--golden:hover {
   background-color: #ffd700;
 }
+.nav-pills .nav-link.active {
+  color: #fff;
+  background-color: var(--primary-color);
+}
 
 /* color funny, pink, golden */
 .link-pink {
   color: #ed4956;
+}
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: var(--primary-color);
+}
+.btn-primary:hover {
+  color: #fff;
+  background-color: #4dbbd1;
+  border-color: #4dbbd1;
+}
+.border-primary {
+  border-color: var(--primary-color) !important;
 }
 
 .btn.btn-pink {

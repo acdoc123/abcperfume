@@ -9,15 +9,15 @@ const transport = nodemailer.createTransport({
   port: 465,
   secure: true,
   auth: {
-    user: "duckshop060801@gmail.com",
-    pass: "btcgryyfmoltikcz",
+    user: process.env.SMPT_MAIL,
+    pass: process.env.SMPT_PASSWORD,
   },
 });
 
 exports.sendChangePasswordEmail = (req, res, next) => {
   console.log("---SEND CHANGE PASSWORD EMAIL---");
-  console.log("ssdds" + process.env.SMPT_PASSWORD);
-  console.log("ssddssss" + process.env.SMPT_MAIL);
+  console.log(process.env.SMPT_PASSWORD);
+  console.log(process.env.SMPT_MAIL);
   const { email, phone, name, title, text, code } = req.msg;
   if (!email && phone) {
     next();
